@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{background: #f00;display: inline-block}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>ss</li>
+			<li>ss</li>
+			<li>ss</li>
+		</ul>
+	</div>
+	<script>
+		let a=1;
+		{
+			let b=2
+			console.log(b)
+		}
+		//  console.log(b) //undefine
+		// for(var i=0;i<5;i++){
+		// 	console.log(i)
+		// }
+		// //console.log(i) 5
+		// for(let j=0;j<5;j++){
+		// 	console.log(j)
+		// }
+		//console.log(j)
+		let lis=document.querySelectorAll('li')
+		for(let k=0;k<lis.length;k++){
+			lis[k].onclick=function(){
+				alert(k)
+			}
+		}
+		function sh(u="world"){   //默认参数
+			console.log(u) 
+		}
+		sh()
+		var f=function(x){
+			return x*2
+		}
+		var g=x=>x*2           //箭头函数
+		console.log(f(2))
+		console.log(g(4))
+		var isOU=n=>n%2==0;
+		console.log(isOU(5))
+		var s=(a,b)=>{
+			if(a>b){
+				return a
+			}
+			return b
+		}
+		console.log(s(1,4))
+		function obj(){
+			var id=9
+  			setTimeout(()=>console.log(this.id), 20);
+		}
+		var id = 1;
+		obj.call({id:5}); // 2
+		var x=()=>alert(6666)
+		var getTempItem = isd => ({ id: 's', name: "Temp" });
+		 //箭头函数
+		x()
+		console.log(getTempItem)
+		export default function(){
+			return s
+		}
+		//
+		// const ad="23";
+		// ad=0
+	</script>
+</body>
+</html>
